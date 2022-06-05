@@ -1,3 +1,8 @@
+1.即可支持时间也可支持事件
+2.事件驱动即设定一系列依次进行的事件，第一个事件决定开始时间，后面的事件依赖于前一个事件完成后开始
+3.支持事件间隔（用作休息时间
+4.记录每一个事件所耗时间
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
