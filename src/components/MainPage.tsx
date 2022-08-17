@@ -20,6 +20,10 @@ export const MainPage = (prop: any) => {
     };
   };
 
+  const currentTime = () => {
+    return new Date().toISOString();
+  };
+
   const logTimeToStorage = () => {
     let rawTimeLogs = localStorage.getItem("timelog") ?? "[]";
     let timeLogs = JSON.parse(rawTimeLogs);
@@ -32,15 +36,18 @@ export const MainPage = (prop: any) => {
   };
 
   const time = new Date();
+
   return (
-    <div className="main-page text-red-500">
-      <section>
-        <h5>current time:{time.toISOString()}</h5>
+    <div className="main-page flex flex-col justify-center items-center h-screen text-red-500">
+      <div>
+        <h5>current time:{currentTime()}</h5>
+      </div>
+      <div>
         <Button variant="contained" onClick={logTimeToStorage}>
           Record Time
         </Button>
         <button onClick={startWebSocket}> websocket</button>
-      </section>
+      </div>
     </div>
   );
 };
